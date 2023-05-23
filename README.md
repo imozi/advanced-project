@@ -1,2 +1,3 @@
-# advanced-project
-Advanced project frontend 
+# Advanced project frontend
+Education project ReactJS & TS
+
