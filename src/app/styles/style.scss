@@ -1,0 +1,14 @@
+@import url('/node_modules/normalize.css/normalize.css');
+@import url('./variables/global.scss');
+@import url('./themes/light.scss');
+@import url('./themes/dark.scss');
+
+
+.app {
+  font: var(--font-m);
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  min-height: 100vh;
+}
+
+
