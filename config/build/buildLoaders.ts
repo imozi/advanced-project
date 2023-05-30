@@ -30,5 +30,26 @@ export const buildLoaders = ({
     ],
   };
 
-  return [typescriptLoader, scssloader];
+  const svgLoader = {
+    test: /\.svg$/i,
+    use: ["@svgr/webpack"],
+  };
+
+  const imagesLoader = {
+    test: /\.(png|jpg|gif)$/i,
+    type: "asset/resource",
+    generator: {
+      filename: "images/[name].[hash][ext]",
+    },
+  };
+
+  const fontsLoader = {
+    test: /\.(eot|woff|woff2|ttf)$/i,
+    type: "asset/resource",
+    generator: {
+      filename: "fonts/[name].[hash][ext]",
+    },
+  };
+
+  return [fontsLoader, imagesLoader, svgLoader, typescriptLoader, scssloader];
 };
