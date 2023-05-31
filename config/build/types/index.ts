@@ -1,4 +1,4 @@
-export type BuildOptions = "production" | "development";
+export type BuildOptions = 'production' | 'development';
 
 export type BuildPaths = {
   entry: string;
