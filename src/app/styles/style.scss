@@ -1,7 +1,7 @@
-@import url('/node_modules/normalize.css/normalize.css');
-@import url('./variables/global.scss');
-@import url('./themes/light.scss');
-@import url('./themes/dark.scss');
+@import '/node_modules/normalize.css/normalize.css';
+@import './variables/global';
+@import './themes/light';
+@import './themes/dark';
 
 *,
 *::before,
@@ -24,4 +24,3 @@
   flex-grow: 1;
   padding: 20px;
 }
-
