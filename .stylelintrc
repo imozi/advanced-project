@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-prettier/recommended"
+],
+  "stylelint.validate": [
+    "scss"
+  ],
+  "ignoreFiles": [
+    "build/*"
+  ]
+}

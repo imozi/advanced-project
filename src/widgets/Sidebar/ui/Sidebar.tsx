@@ -1,8 +1,8 @@
-import { FC, useState } from "react";
-import { classNames } from "shared/lib";
-import cls from "./Sidebar.module.scss";
-import { ThemeSwitcher } from "widgets/ThemeSwitcher";
-import { LangSwitcher } from "widgets/LangSwitcher";
+import { FC, useState } from 'react';
+import { classNames } from 'shared/lib';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
+import { LangSwitcher } from 'widgets/LangSwitcher';
+import cls from './Sidebar.module.scss';
 
 interface ISidebarProps {
   className?: string;
@@ -21,10 +21,12 @@ export const Sidebar: FC<ISidebarProps> = ({ className }) => {
         className,
       ])}
     >
-      <button onClick={onClickCollapsed}>toggle</button>
+      <button type="button" onClick={onClickCollapsed}>
+        toggle
+      </button>
       <div className={cls.switchers}>
         <ThemeSwitcher />
-        <LangSwitcher className={cls.lang}/>
+        <LangSwitcher className={cls.lang} />
       </div>
     </div>
   );

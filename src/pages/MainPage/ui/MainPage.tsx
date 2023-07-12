@@ -1,7 +1,1 @@
-export const MainPage = () => {
-  return (
-    <div className="main">
-
-    </div>
-  )
-}
+export const MainPage = () => <div className="main" />;
