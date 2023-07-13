@@ -5,12 +5,14 @@ import { useTheme } from 'app/providers/ThemeProvider';
 import { Sidebar } from 'widgets/Sidebar';
 import { Suspense } from 'react';
 import '../styles/style.scss';
+import { Loader } from 'shared/ui/Loader';
+
 
 export const App = () => {
   const { theme } = useTheme();
 
   return (
-    <Suspense fallback="">
+    <Suspense fallback={<Loader />}>
       <div className={classNames('app', {}, [theme])}>
         <Navbar />
         <div className="content-page ">
