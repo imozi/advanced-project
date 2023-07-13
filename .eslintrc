@@ -46,7 +46,15 @@
   ],
   "react/react-in-jsx-scope": "off",
   "react/jsx-props-no-spreading": "warn",
-  "i18next/no-literal-string": ["error", { "markupOnly": true }]
+  "i18next/no-literal-string": ["error", { "markupOnly": true, "ignoreAttribute": ["datatest-id"] }]
   },
-  "ignorePatterns": ["build"]
+  "ignorePatterns": ["build"],
+  "overrides": [
+    {
+      "files": ["**/src/**/*.test.{ts,tsx}"],
+      "rules": {
+        "i18next/no-literal-string": "off"
+      }
+    }
+  ]
 }
