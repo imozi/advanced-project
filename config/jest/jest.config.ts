@@ -7,6 +7,7 @@ import type { Config } from 'jest';
 import path from 'path';
 
 const config: Config = {
+  verbose: true,
   clearMocks: true,
   preset: 'ts-jest',
   testEnvironment: 'jsdom',
@@ -26,6 +27,7 @@ const config: Config = {
   testMatch: [
     `<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)`
   ],
+  setupFilesAfterEnv: ['<rootDir>config/jest/jestSetup.ts'],
   moduleNameMapper: {
     '\\.s?css$': 'identity-obj-proxy',
     '\\.svg': path.resolve(__dirname, 'jestEmptyComponent.tsx')
